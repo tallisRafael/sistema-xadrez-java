@@ -10,4 +10,8 @@ public class Peca {
 		posicao = null;
 	}
 
+	protected Tabuleiro getTabuleiro() {
+		return tabuleiro;
+	}
+
 }
