@@ -12,7 +12,7 @@ public class PosicaoXadrez {
 
 	public PosicaoXadrez(char coluna, int linha) {
 		if (coluna < 'a' || coluna > 'h' || linha < 1 || linha > 8) {
-			throw new ExecoesDoXadrez("Erro na instanciação das posiçoes do jogo. Valores valido é de a1 ate h8.");
+			throw new ExecoesDoXadrez("Erro na instanciação das posiçoes do jogo. Valores validos é de a1 ate h8.");
 		}
 		this.coluna = coluna;
 		this.linha = linha;
@@ -31,7 +31,7 @@ public class PosicaoXadrez {
 	}
 
 	public String toString() {
-        return "" + coluna + linha;
+		return "" + coluna + linha;
 	}
 
 }
