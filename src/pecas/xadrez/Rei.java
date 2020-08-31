@@ -1,13 +1,13 @@
 package pecas.xadrez;
 
 import tabuleiro.Tabuleiro;
-import xadrez.Color;
+import xadrez.Cor;
 import xadrez.PecaDeXadrez;
 
 public class Rei extends PecaDeXadrez {
 
-	public Rei(Tabuleiro tabuleiro, Color color) {
-		super(tabuleiro, color);
+	public Rei(Tabuleiro tabuleiro, Cor cor) {
+		super(tabuleiro, cor);
 
 	}
 

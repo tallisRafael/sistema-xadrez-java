@@ -2,7 +2,7 @@ package xadrez;
 
 import pecas.xadrez.Rei;
 import pecas.xadrez.Torre;
-import tabuleiro.Posicao;
+
 import tabuleiro.Tabuleiro;
 
 public class PartidaDeXadrez {
@@ -29,9 +29,19 @@ public class PartidaDeXadrez {
 	}
 
 	private void configuracaoInicial() {
-		colocarNovaPeca('e', 6, new Torre(tabuleiro, Color.Branco));
-		colocarNovaPeca('e', 8, new Rei(tabuleiro, Color.Preto));
-		colocarNovaPeca('e', 1, new Torre(tabuleiro, Color.Branco));
+		colocarNovaPeca('c', 1, new Torre(tabuleiro, Cor.Branco));
+		colocarNovaPeca('c', 2, new Torre(tabuleiro, Cor.Branco));
+		colocarNovaPeca('d', 2, new Torre(tabuleiro, Cor.Branco));
+		colocarNovaPeca('e', 2, new Torre(tabuleiro, Cor.Branco));
+		colocarNovaPeca('e', 1, new Torre(tabuleiro, Cor.Branco));
+		colocarNovaPeca('d', 1, new Rei(tabuleiro, Cor.Branco));
+
+		colocarNovaPeca('c', 7, new Torre(tabuleiro, Cor.Preto));
+		colocarNovaPeca('c', 8, new Torre(tabuleiro, Cor.Preto));
+		colocarNovaPeca('d', 7, new Torre(tabuleiro, Cor.Preto));
+		colocarNovaPeca('e', 7, new Torre(tabuleiro, Cor.Preto));
+		colocarNovaPeca('e', 8, new Torre(tabuleiro, Cor.Preto));
+		colocarNovaPeca('d', 8, new Rei(tabuleiro, Cor.Preto));
 
 	}
 }
