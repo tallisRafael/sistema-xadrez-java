@@ -1,6 +1,5 @@
 package tabuleiro;
 
-import javax.swing.text.StyledEditorKit.BoldAction;
 
 public abstract class Peca {
 	protected Posicao posicao;

@@ -29,7 +29,7 @@ public class Program {
 				PecaDeXadrez pecaCapturada = partidaDeXadrez.movendoPeca(origem, destino);
 			} catch (ExecoesDoXadrez e) {
 				System.out.println(e.getMessage());
-				sc.hasNextLine();
+				sc.nextLine();
 			} catch (InputMismatchException e) {
 				System.out.println(e.getMessage());
 				sc.nextLine();
