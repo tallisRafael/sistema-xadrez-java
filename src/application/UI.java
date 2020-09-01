@@ -28,15 +28,19 @@ public class UI {
 	public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
 	public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
+	public static void limparTela() {
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
+	}
+
 	public static PosicaoXadrez lendoPosicao(Scanner sc) {
 		try {
 			String s = sc.nextLine();
 			char coluna = s.charAt(0);
 			int linha = Integer.parseInt(s.substring(1));
 			return new PosicaoXadrez(coluna, linha);
-		} 
-		catch (RuntimeException e) {
-			throw new InputMismatchException("Erro ao ler a posicao. Os valores válidos vão de a1 a h8.");
+		} catch (RuntimeException e) {
+			throw new InputMismatchException("erro ao ler a posicao. Os valores validos vao de a1 a h8.");
 		}
 	}
 
@@ -64,5 +68,4 @@ public class UI {
 		System.out.print(" ");
 	}
 
-	
 }

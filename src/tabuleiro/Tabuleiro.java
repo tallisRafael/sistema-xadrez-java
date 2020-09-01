@@ -7,8 +7,7 @@ public class Tabuleiro {
 
 	public Tabuleiro(int linhas, int colunas) {
 		if (linhas < 1 || colunas < 1) {
-			throw new ExecoesDoTabuleiro(
-					"Erro ao criar o tabuleiro: o tabuleiro tem que ter no minimo uma linha e uma coluna");
+			throw new ExecoesDoTabuleiro("Erro ao criar o tabuleiro: o tabuleiro tem que ter no minimo uma linha e uma coluna");
 		}
 		this.linhas = linhas;
 		this.colunas = colunas;
@@ -37,7 +36,7 @@ public class Tabuleiro {
 
 	public void colocarPeca(Peca peca, Posicao posicao) {
 		if (temPecaNaPosicao(posicao)) {
-			throw new ExecoesDoTabuleiro("Já existe uma peca nessa posicao " + posicao);
+			throw new ExecoesDoTabuleiro("Ja existe uma peca nessa posicao " + posicao);
 		}
 		pecas[posicao.getLinha()][posicao.getColuna()] = peca;
 		peca.posicao = posicao;
