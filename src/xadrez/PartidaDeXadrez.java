@@ -25,6 +25,13 @@ public class PartidaDeXadrez {
 		return mat;
 	}
 
+	public boolean[][] possiveisMovimentos(PosicaoXadrez posicaoDeOrigem) {
+		Posicao posicao = posicaoDeOrigem.toPosicao();
+		validandoPosicaoOrigem(posicao);
+
+		return tabuleiro.peca(posicao).possiveisMovimentos();
+	}
+
 	public PecaDeXadrez movendoPeca(PosicaoXadrez posicaoDeOrigem, PosicaoXadrez posicaoDeDestino) {
 		Posicao origem = posicaoDeOrigem.toPosicao();
 		Posicao destino = posicaoDeDestino.toPosicao();
@@ -48,7 +55,6 @@ public class PartidaDeXadrez {
 
 			throw new ExecoesDoXadrez("Nao Existe peca na posicao de origem.");
 		}
-		System.out.println();
 		if (!tabuleiro.peca(posicao).existePosicaoParaMover()) {
 			throw new ExecoesDoXadrez("Nao e possivel mover para essa posicao");
 		}
