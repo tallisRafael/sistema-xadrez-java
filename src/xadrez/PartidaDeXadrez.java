@@ -68,7 +68,7 @@ public class PartidaDeXadrez {
 			throw new ExecoesDoXadrez("Nao Existe peca na posicao de origem.");
 		}
 		if (jogadorAtual != ((PecaDeXadrez) tabuleiro.peca(posicao)).getCor()) {
-			throw new ExecoesDoXadrez("A peca escolhida nao é sua");
+			throw new ExecoesDoXadrez("A peca escolhida nao e sua");
 		}
 		if (!tabuleiro.peca(posicao).existePosicaoParaMover()) {
 			throw new ExecoesDoXadrez("Nao e possivel mover para essa posicao");
