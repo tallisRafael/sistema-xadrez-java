@@ -64,46 +64,6 @@ public class Bispo extends PecaDeXadrez {
 
 		}
 
-		p.atualizarPosicao(posicao.getLinha() - 1, posicao.getColuna() - 1);
-		while (getTabuleiro().posicaoExiste(p) && !getTabuleiro().temPecaNaPosicao(p)) {
-			mat[p.getLinha()][p.getColuna()] = true;
-			p.atualizarPosicao(p.getLinha() - 1, p.getColuna() - 1);
-		}
-		if (getTabuleiro().posicaoExiste(p) && existePecaInimiga(p)) {
-			mat[p.getLinha()][p.getColuna()] = true;
-
-		}
-		// ne
-		p.atualizarPosicao(posicao.getLinha() - 1, posicao.getColuna() + 1);
-		while (getTabuleiro().posicaoExiste(p) && !getTabuleiro().temPecaNaPosicao(p)) {
-			mat[p.getLinha()][p.getColuna()] = true;
-			p.atualizarPosicao(p.getLinha() - 1, p.getColuna() + 1);
-		}
-		if (getTabuleiro().posicaoExiste(p) && existePecaInimiga(p)) {
-			mat[p.getLinha()][p.getColuna()] = true;
-
-		}
-		// se
-		p.atualizarPosicao(posicao.getLinha() + 1, posicao.getColuna() + 1);
-		while (getTabuleiro().posicaoExiste(p) && !getTabuleiro().temPecaNaPosicao(p)) {
-			mat[p.getLinha()][p.getColuna()] = true;
-			p.atualizarPosicao(p.getLinha() + 1, p.getColuna() + 1);
-		}
-		if (getTabuleiro().posicaoExiste(p) && existePecaInimiga(p)) {
-			mat[p.getLinha()][p.getColuna()] = true;
-
-		}
-		// sw
-		p.atualizarPosicao(posicao.getLinha() + 1, posicao.getColuna() - 1);
-		while (getTabuleiro().posicaoExiste(p) && !getTabuleiro().temPecaNaPosicao(p)) {
-			mat[p.getLinha()][p.getColuna()] = true;
-			p.atualizarPosicao(p.getLinha() + 1, p.getColuna() - 1);
-		}
-		if (getTabuleiro().posicaoExiste(p) && existePecaInimiga(p)) {
-			mat[p.getLinha()][p.getColuna()] = true;
-
-		}
-
 		return mat;
 
 	}
