@@ -119,7 +119,7 @@ public class PartidaDeXadrez {
 		if (promocao == null) {
 			throw new IllegalStateException("Nao a peca para receber promocao");
 		}
-		if (!tipo.equals("B") && !tipo.equals("C") && !tipo.equals("T") && !tipo.equals("R")) {
+		if (!tipo.equals("B") && !tipo.equals("C") && !tipo.equals("T") & !tipo.equals("R")) {
 
 			throw new InvalidParameterException("Tipo invalio de promocao");
 		}
